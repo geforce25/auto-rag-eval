@@ -109,8 +109,8 @@ class StackExchangeData:
             data_cat_list.append(reduce(lambda res, f: f(res), funcs(cat), dataset))
         concat_dataset = concatenate_datasets(data_cat_list).shuffle(seed=42)
 
-        concat_dataset.to_json(f"{ROOTPATH}/Data/StackExchange/KnowledgeCorpus/main/data_{datetime.fromtimestamp(time.time()).strftime('%Y%m%d%H')}.json",
-                               lines=False)
+        output_filename = f"{ROOTPATH}/StackExchange/KnowledgeCorpus/main/data_{datetime.fromtimestamp(time.time()).strftime('%Y%m%d%H')}.json"
+        concat_dataset.to_json(output_filename,lines=False)
 
 
 if __name__ == "__main__":

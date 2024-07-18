@@ -15,5 +15,12 @@
                 "StackExchange"
             ]
         },
+        {
+            "name": "Preprocessor: StackExchange",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "Data.StackExchange.preprocessor",
+            "cwd": "${workspaceFolder}/auto-rag-eval"
+        },
     ]
 }
