@@ -1,0 +1,10 @@
+numpy
+boto3
+datasets
+nltk
+tqdm
+markdownify
+pydantic
+torch
+sentence-transformers
+tenacity
