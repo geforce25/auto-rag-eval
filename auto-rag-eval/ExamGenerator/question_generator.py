@@ -40,10 +40,11 @@ class BatchExamGenerator:
 
     def batch_generate_exam(self, data_folder: str) -> None:
 
-        with open(get_single_file_in_folder(data_folder), "r") as f:
+        data_filename = get_single_file_in_folder(data_folder)
+        with open(data_filename, "r", encoding="utf-8") as f:
             data = json.load(f)
 
-        # Suffle the data to prevent overfocusing on a topic
+        # Shuffle the data to prevent overfocusing on a topic
         # ---
         random.seed(10)
         random.shuffle(data)
